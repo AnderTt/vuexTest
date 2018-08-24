@@ -8,7 +8,6 @@
   </section>
 </template>
 <script>
-  import PubSub from 'pubsub-js';
   export default {
     data (){
       return {
@@ -23,7 +22,7 @@
           return
         }
         //发布消息
-        PubSub.publish('search',this.searchName);
+        this.$store.dispatch('search',searchName);
         //清空input中的内容
         this.searchName = '';
       }

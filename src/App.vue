@@ -1,24 +1,16 @@
 <template>
-  <div class="todo-container">
-    <div class="todo-wrap">
-      <TodoHeader/>
-      <List/>
-      <todo-footer/>
-    </div>
+  <div class="container">
+    <Search/>
+    <UserMain/>
   </div>
 </template>
 <script>
-  import Header from './components/Header.vue';
-  import List from './components/List.vue';
-  import Footer from './components/Footer.vue';
+  import Search  from './components/search.vue';
+  import Main from './components/main.vue';
   export default {
     components : {
-      TodoHeader : Header,
-      List,
-      TodoFooter : Footer
-    },
-    mounted(){
-      this.$store.dispatch('readTodos')
+      Search,
+      UserMain : Main,
     }
   }
 </script>
